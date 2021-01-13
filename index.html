@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h4>Enter the data: (separated by a space) </h4>
-    <input class = "input" type = "text"> 
+  </head>
+  <body>
+    <h4>Enter the data: (separated by a space)</h4>
+    <input class="input" type="text" />
+    <button type="botton" class="submit">Share your data!</button>
 
-    <button type = "botton" class = "submit">Click Me </button>
-
-    <h4>Which operation you wanna perform on your data? </h4>
-    <button type = "botton" name = "up"> Up </button></t>
-    <button type = "botton" name = "down"> Down </button></t>
-    <button type = "botton" name = "max"> Max </button></t>
-    <button type = "botton" name = "min"> Min </button></br></br>
-    <button type = "botton" name = "sum"> Sum </button></t>
-    <button type = "botton" name = "mean"> Mean </button></t>
-    <button type = "botton" name = "median"> Median </button></t>
-    <button type = "botton" name = "std"> Std.Dev </button></t></br></br>
-    <h5>Answer: </h5>
-    <div id = "result"> </div>
-    <script src = "task2.js">  </script>
-
-</body>
+    <div class="hidden" style="display: none">
+      <p>
+        Select the operation for your data:
+        <select name="selectbtn">
+          <option value="0">Sort(ASC)</option>
+          <option value="1">Sort(DESC)</option>
+          <option value="2">Max</option>
+          <option value="3">Min</option>
+          <option value="4">Sum</option>
+          <option value="5">Mean</option>
+          <option value="6">Median</option>
+          <option value="7">Std. Deviation</option>
+        </select>
+      </p>
+    </div>
+    <br />
+    <div class="result" style="display: none">Result:</div>
+    <script src="task2.js"></script>
+  </body>
 </html>
