@@ -86,7 +86,7 @@ let mymap = new Map();
 submitEl.addEventListener("click", function () {
   data = document.querySelector(".input").value.split(" ");
 
-  if (data.length === 1 && data[0] === "") {
+  if (data.length === 1 && isNaN(data[0])) {
     alert("No DATA! No Analysis!");
   }
 
@@ -94,17 +94,14 @@ submitEl.addEventListener("click", function () {
     data[i] = Number(data[i].trim());
   }
 
-  document.querySelector(".hidden").style.display = "";
-
-  document.querySelector(".result").style.display = "none";
-
   mymap.clear();
+  performOperation();
 });
 
 var selectEl = document.querySelector("select");
 var divEl = document.querySelector(".result");
 
-selectEl.addEventListener("change", function () {
+function performOperation() {
   divEl.style.display = "";
   var op = selectEl.value;
 
@@ -129,4 +126,4 @@ selectEl.addEventListener("change", function () {
   }
 
   divEl.innerHTML = "Result : " + mymap.get(op);
-});
+}
